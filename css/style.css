@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  display: inline-block;
+  padding: 1em 1.5em;
+  box-shadow: 0 2px 4px #6c757d;
+}
+
+nav {
+  background-color: #495057;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+nav ul {
+  /* Descendant selector*/
+  display: flex;
+}
+nav ul a {
+  display: block;
+  background-color: red;
+  padding: 1em 1.5em;
+  color: #fff;
+}
+nav ul ul {
+  visibility: hidden;
+}
+nav > a {
+  /* Child Selecror */
+  display: block;
+  font-size: 1.5em;
+  color: #fff;
+  line-height: 80px;
+}
+
+.product {
+  color: #007bff;
+}
+
+.alert {
+  margin: 10px auto;
+  width: 900px;
+  padding: 1em;
+  background-color: #28a745;
+  color: #fff;
+  position: relative;
+}
+.alert .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  background-color: #1e7e34;
+  border: none;
+}
+[dir=rtl] .alert .close {
+  left: 10px;
+  right: auto;
+}
+.alert .close:hover {
+  background-color: #34ce57;
+}
+
+.btn-secondary, .btn-success {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1em 2em;
+  cursor: pointer;
+  background-color: #ccc;
+  color: black;
+  border: none;
+  outline: none;
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+.btn-success:hover {
+  background-color: #5dd879;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background-color: #3d4246;
+}
+
+.danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid #001a00;
+  background-color: green;
+}
+
+.info {
+  color: #007bff;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid #0c525d;
+  background-color: #17a2b8;
+}
+
+.test {
+  background-color: red;
+  background-image: -webkit-linear-gradient(45deg, red, green, yellow);
+  background-image: -moz-linear-gradient(45deg, red, green, yellow);
+  background-image: -o-linear-gradient(45deg, red, green, yellow);
+  background-image: linear-gradient(45deg, red, green, yellow);
+}
+
+.test2 {
+  background-color: red;
+  background-image: -webkit-linear-gradient(90deg, lightgreen, darkgreen, lightgreen);
+  background-image: -moz-linear-gradient(90deg, lightgreen, darkgreen, lightgreen);
+  background-image: -o-linear-gradient(90deg, lightgreen, darkgreen, lightgreen);
+  background-image: linear-gradient(90deg, lightgreen, darkgreen, lightgreen);
+}
+
+/*# sourceMappingURL=style.css.map */

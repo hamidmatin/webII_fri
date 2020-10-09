@@ -1,0 +1,37 @@
+
+
+// @import "variable";
+
+
+nav{
+    $pimary-color: red;
+    background-color: $gray-700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    ul{
+        /* Descendant selector*/
+        display: flex;
+        a{
+            display: block;
+            background-color: $pimary-color;
+            padding: 1em 1.5em;
+            color: $white;
+        }
+        ul{
+            visibility: hidden;
+        }
+    }
+    >a{
+        /* Child Selecror */
+        display: block;
+        font-size: 1.5em;
+        color: $white;
+        line-height: 80px;
+    }
+}
+
+.product{
+    color: $pimary-color;
+}

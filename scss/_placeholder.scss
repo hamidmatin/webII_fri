@@ -1,0 +1,30 @@
+%btn {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1em 2em;
+  cursor: pointer;
+  background-color: #ccc;
+  color: black;
+  border: none;
+  outline: none;
+  font-family: $main-sans-serif-font;
+  font-size: 16px;
+}
+.btn-success {
+  @extend %btn;
+  background-color: $green;
+  color: $white ;
+  &:hover{
+    background-color: lighten($color: $green, $amount: 20);
+  }
+}
+.btn-secondary{
+    @extend %btn;
+    background-color: $secondary-color;
+    color: $white;   
+    &:hover{
+        background-color: darken($color: $secondary-color, $amount: 20);
+    }
+}
+

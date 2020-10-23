@@ -1,0 +1,61 @@
+%btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font:16px  Arial, Helvetica, sans-serif;
+}
+.btn-success-placeholder{
+    @extend %btn;
+    background-color: $blue;
+    color: #ffffff;
+}
+
+.btn-secondary-placeholder{
+    @extend %btn;
+    background-color: $gray-500;
+    color: #ffffff;
+}
+
+@mixin btn-mixin {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    font:16px  Arial, Helvetica, sans-serif;
+}
+
+.btn-success-mixin{
+    @include btn-mixin;
+    background-color: $blue;
+    color: #ffffff;
+}
+.btn-secondary-mixin{
+    @include btn-mixin();
+    background-color: $gray-500;
+    color: #ffffff;
+}
+
+@mixin btn-mixin-with-param($padding, $border-radius) {
+    display: inline-block;
+    text-decoration: none;
+    padding: $padding;
+    border-radius: $border-radius + px;
+    outline: none; 
+    border: none;
+    font:16px  Arial, Helvetica, sans-serif;
+}
+.btn-success-mixin-with-param{
+    @include btn-mixin-with-param(1em 2em, 4);
+    background-color: $blue;
+    color: #ffffff;
+}
+.btn-secondary-mixin-with-param{
+    @include btn-mixin-with-param(2em, 0);
+    background-color: $gray-500;
+    color: #ffffff;
+}

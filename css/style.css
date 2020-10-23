@@ -91,8 +91,8 @@
 /***************/
 .pulse {
   padding: 0;
-  -webkit-animation-name: inline-u363fc8bb;
-          animation-name: inline-u363fc8bb;
+  -webkit-animation-name: inline-u6c122f50;
+          animation-name: inline-u6c122f50;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
@@ -100,7 +100,7 @@
   margin: 0;
 }
 
-@-webkit-keyframes inline-u363fc8bb {
+@-webkit-keyframes inline-u6c122f50 {
   0% {
     -webkit-transform: translateY(-10%);
             transform: translateY(-10%);
@@ -115,7 +115,7 @@
   }
 }
 
-@keyframes inline-u363fc8bb {
+@keyframes inline-u6c122f50 {
   0% {
     -webkit-transform: translateY(-10%);
             transform: translateY(-10%);
@@ -131,15 +131,15 @@
 }
 
 .go-right {
-  -webkit-animation-name: inline-u3a95c171;
-          animation-name: inline-u3a95c171;
+  -webkit-animation-name: inline-u1f3ccb2a;
+          animation-name: inline-u1f3ccb2a;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 
-@-webkit-keyframes inline-u3a95c171 {
+@-webkit-keyframes inline-u1f3ccb2a {
   0%, 100% {
     -webkit-transform: translateX(0) rotate(0);
             transform: translateX(0) rotate(0);
@@ -150,7 +150,7 @@
   }
 }
 
-@keyframes inline-u3a95c171 {
+@keyframes inline-u1f3ccb2a {
   0%, 100% {
     -webkit-transform: translateX(0) rotate(0);
             transform: translateX(0) rotate(0);
@@ -364,4 +364,57 @@
   .col-xl-5 {
     width: 100%;
   }
+}
+
+/************* if ************/
+.square-av-100 {
+  width: 100px;
+  height: 100px;
+}
+
+.square-av-200 {
+  width: 200px;
+  height: 200px;
+}
+
+.circle-av-100 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.circle-av-200 {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+/************/
+.banner {
+  background-color: #f2ece4;
+  color: #036;
+}
+
+body.dark .banner {
+  background-color: #6b717f;
+  color: #d2e1dd;
+}
+
+/**************/
+.next {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 2.5px;
+  border-left-color: black;
+}
+
+.prev {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-right-color: red;
 }

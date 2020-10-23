@@ -65,3 +65,98 @@
   background-color: #adb5bd;
   color: #ffffff;
 }
+
+/************* Interpolation ****************/
+.icon-mail {
+  background-image: url("/icons/mail.svg");
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.icon-post {
+  background-image: url("/icons/post.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.icon-delete {
+  background-image: url("/icons/delete.svg");
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/***************/
+.pulse {
+  padding: 0;
+  -webkit-animation-name: inline-u53a16ecd;
+          animation-name: inline-u53a16ecd;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  margin: 0;
+}
+
+@-webkit-keyframes inline-u53a16ecd {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  50% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes inline-u53a16ecd {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  50% {
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.go-right {
+  -webkit-animation-name: inline-uf73d17c4;
+          animation-name: inline-uf73d17c4;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes inline-uf73d17c4 {
+  0%, 100% {
+    -webkit-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateX(500px) rotate(180deg);
+            transform: translateX(500px) rotate(180deg);
+  }
+}
+
+@keyframes inline-uf73d17c4 {
+  0%, 100% {
+    -webkit-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0);
+  }
+  50% {
+    -webkit-transform: translateX(500px) rotate(180deg);
+            transform: translateX(500px) rotate(180deg);
+  }
+}

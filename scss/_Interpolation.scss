@@ -1,0 +1,42 @@
+/************* Interpolation ****************/
+@mixin corner-icon($name, $top-or-bottom, $left-or-right) {
+  .icon-#{$name} {
+    background-image: url("/icons/#{$name}.svg");
+    position: absolute;
+    #{$top-or-bottom}: 0;
+    #{$left-or-right}: 0;
+  }
+}
+
+@include corner-icon("mail", top, left);
+@include corner-icon("post", top, right);
+@include corner-icon("delete", bottom, right);
+
+/***************/
+@mixin inline-animation($duration) {
+  $name: inline-#{unique-id()};
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+}
+
+.pulse{
+    padding: 0;
+    @include inline-animation(2s){
+        0%{ transform: translateY(-10%);}
+        50%{transform: translateY(5%);}
+        100%{ transform: translateY(0);}
+    };
+    margin: 0;
+}
+
+.go-right{
+    @include inline-animation(5s){
+        0%, 100%{transform: translateX(0) rotate(0);}
+        50%{transform: translateX(500px) rotate(180deg);}
+    }
+}

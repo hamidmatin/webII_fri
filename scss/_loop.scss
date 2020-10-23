@@ -1,0 +1,101 @@
+/************ LOOP ************/
+/********* for *************/
+$base-color: hsl(210, 100%, 20%);
+
+// @for $i from 1 to 4 {
+//   .list li:nth-child(3n + #{$i}) {
+//     background-color: lighten($base-color, $i * 5%);
+//   }
+// }
+@for $i from 1 through 3 {
+  .list li:nth-child(3n + #{$i}) {
+    background-color: lighten($base-color, $i * 5%);
+  }
+}
+
+/*******************/
+@mixin create-color($name, $base-color, $count) {
+  @for $i from 1 through $count {
+    .#{$name}-lighten-#{$i} {
+      background-color: lighten($base-color, $i * 5%);
+    }
+    .#{$name}-darken-#{$i} {
+      background-color: darken($base-color, $i * 5%);
+    }
+  }
+}
+
+@include create-color("red", #ff0000, 5);
+@include create-color("blue", #0000ff, 5);
+
+/******** list & each *************/
+
+$sizes: 40, 50, 80;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size + px;
+    height: $size + px;
+    width: $size + px;
+  }
+}
+
+/******************/
+
+// @mixin grid-system($media, $column-count) {
+//   @for $i from 1 through $column-count {
+//     .col-#{$media}-#{$i} {
+//       width: 100% / $column-count * $i;
+//     }
+//   }
+// }
+// @include grid-system("md", 15);
+// @include grid-system("lg", 15);
+
+// @mixin grid-system($medias, $column-count) {
+//   @each $media in $medias {
+//     @for $i from 1 through $column-count {
+//         .col-#{$media}-#{$i} {
+//           width: 100% / $column-count * $i;
+//         }
+//       }
+//   }
+// }
+// $medias : "sm", "md", "lg";
+// @include grid-system($medias, 12);
+
+/*********** Map ***********/
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "dark": 900,
+);
+
+@each $name, $value in $font-weights {
+  .#{$name} {
+    font-weight: $value;
+  }
+}
+
+/******************/
+$medias-map: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);
+
+@mixin grid-system($medias, $column-count) {
+  @each $media, $value in $medias {
+    @media screen and (min-width: $value) {
+      @for $i from 1 through $column-count {
+        .col-#{$media}-#{$i} {
+          width: 100% / $column-count * $i;
+        }
+      }
+    }
+  }
+}
+
+@include grid-system($medias-map, 5);

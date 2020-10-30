@@ -1,8 +1,73 @@
 @theme-light: true;
 
-button when (@theme-light = true) {
-  color: white;
+// button when (@theme-light) {
+//   color: white;
+// }
+// button when (not(@theme-light)) {
+//   color: #555555;
+// }
+
+button{
+  color: if(@theme-light, white, #555555);
 }
-button when (@theme-light = false) {
+
+@theme: 'darkred';
+
+a when (@theme = 'dark') {
   color: #555555;
+}
+
+a when (@theme = 'green') {
+  color: #52dd91;
+}
+a when (@theme = 'pink') {
+  color: #e27ec9;
+}
+a when ((@theme = 'red') or (@theme = 'darkred')) {
+  color: #ec1212;
+}
+
+@my-option : true;
+
+& when (@my-option) {
+  p {
+    color: white;
+  }
+  div {
+    color: blue;
+  }
+}
+
+/*****************
+
+each(@list, {
+  @value
+  @key
+  @index
+}
+);
+*/
+
+
+@set: {
+  one: blue;
+  two: green;
+  three: red;
+}
+.set {
+  each(@set, {
+    @{key}-@{index}: @value;
+  });
+}
+
+.set-2() {
+  one: blue;
+  two: green;
+  three: red;
+}
+.set-2 {
+  // Call mixin and iterate each rule
+  each(.set-2(), .(@v, @k, @i) {
+    @{k}-@{i}: @v;
+  });
 }

@@ -1,0 +1,85 @@
+a {
+  color: blue;
+  &:hover {
+    color: green;
+  }
+}
+ul {
+  padding: 0;
+  margin: 0;
+  > li {
+    float: left;
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+
+.button {
+  &-ok {
+    background-image: url("ok.png");
+  }
+  &-cancel {
+    background-image: url("cancel.png");
+  }
+
+  &-custom {
+    background-image: url("custom.png");
+  }
+}
+
+
+.link {
+    & + & {
+      color: red;
+    }
+  
+    & & {
+      color: green;
+    }
+  
+    && {
+      color: blue;
+    }
+  
+    &, &ish {
+      color: cyan;
+    }
+  }
+
+  ul{
+      padding: 0;
+      margin: 0;
+      & &{
+          visibility: hidden;
+      }
+  }
+
+  .grand {
+    .parent {
+      & > & {
+        color: red;
+      }
+  
+      & & {
+        color: green;
+      }
+  
+      && {
+        color: blue;
+      }
+  
+      &, &ish {
+        color: cyan;
+      }
+    }
+  }
+
+  ul{
+      li{
+          & &{
+              top: 0;
+          }
+      }
+  }

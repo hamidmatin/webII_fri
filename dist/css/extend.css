@@ -1,0 +1,29 @@
+.a,
+.b,
+.c,
+.d,
+.d {
+  padding: 10px;
+}
+ul .a,
+ul .c {
+  background-color: yellow;
+}
+.active.a,
+.active.c {
+  border-bottom: 1px solid #000;
+}
+.a.btn,
+.c.btn {
+  font-size: medium;
+}
+.b,
+.d {
+  margin: 20px;
+}
+.c {
+  color: red;
+}
+.d {
+  font-family: 'Courier New', Courier, monospace;
+}

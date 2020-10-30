@@ -1,0 +1,62 @@
+a {
+  color: blue;
+}
+a:hover {
+  color: green;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul > li {
+  float: left;
+}
+ul > li a {
+  display: block;
+  text-decoration: none;
+}
+.button-ok {
+  background-image: url("ok.png");
+}
+.button-cancel {
+  background-image: url("cancel.png");
+}
+.button-custom {
+  background-image: url("custom.png");
+}
+.link + .link {
+  color: red;
+}
+.link .link {
+  color: green;
+}
+.link.link {
+  color: blue;
+}
+.link,
+.linkish {
+  color: cyan;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul ul {
+  visibility: hidden;
+}
+.grand .parent > .grand .parent {
+  color: red;
+}
+.grand .parent .grand .parent {
+  color: green;
+}
+.grand .parent.grand .parent {
+  color: blue;
+}
+.grand .parent,
+.grand .parentish {
+  color: cyan;
+}
+ul li ul li {
+  top: 0;
+}

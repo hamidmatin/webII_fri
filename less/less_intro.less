@@ -1,0 +1,105 @@
+@width: 20px;
+@height: @width * 2;
+
+#header {
+  width: @width;
+  height: @height;
+}
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+#menu a {
+  color: #111;
+  .bordered();
+}
+.post a {
+  color: red;
+  .bordered();
+}
+
+.a,
+#b {
+  color: red;
+}
+.mixin-class {
+  .a();
+}
+.mixin-id {
+  #b();
+}
+
+.border(@color; @width) {
+  border: @color @width solid;
+}
+
+.box {
+  width: 300px;
+  .border(red, 5px);
+}
+
+.foo (@bg: #f5f5f5; @color: #900) {
+  background: @bg;
+  color: @color;
+}
+
+.my-foo {
+  .foo(#bf4c21, lightgreen);
+}
+.unimportant {
+  .foo();
+}
+.important {
+  .foo() !important;
+}
+
+.mixin(@color) {
+  border-color: @color;
+}
+.mixin(@color; @padding: 2px) {
+  color: @color;
+  padding: @padding;
+}
+.mixin(@color; @padding: 2px; @margin: 2px) {
+  background-color: @color;
+  padding: @padding;
+  margin: @margin @margin @margin @margin;
+}
+.some .selector div {
+  .mixin(#008000);
+}
+
+.box-shadow(@x: 0; @y: 2px; @blur: 4px; @spread: 0; @color:#0000005b) {
+  box-shadow: @arguments;
+}
+
+.box-sh{
+    .box-shadow();
+}
+.box-sh1{
+    .box-shadow(-1px, 0, 6px, 1px, red)
+}
+
+.animation(@name; @duration; @delay:0; @timing-function: ease){
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+    -o-animation: @arguments;
+    animation: @arguments;
+}
+
+.flip{
+    .animation(flipX, 2s)
+}
+.slide{
+    .animation(slide, 600ms, 100ms, ease-out)
+}
+
+.average(@x, @y) {
+    @result: ((@x + @y) / 2);
+  } 
+  
+  div {
+    // call a mixin and look up its "@result" value
+    padding: .average(16px, 40px)[@result];
+  }

@@ -1,0 +1,26 @@
+.a{
+    padding: 10px;
+}
+ul .a{
+    background-color: yellow;
+}
+.active.a{
+    border-bottom: 1px solid #000;
+}
+.a.btn{
+    font-size: medium;
+}
+// راه اول
+.b{
+    &:extend(.a);
+    margin: 20px;
+}
+
+// راه دوم
+.c:extend(.a all){
+    color: red;
+}
+
+.d:extend(.a, .b){
+    font-family: 'Courier New', Courier, monospace;
+}
